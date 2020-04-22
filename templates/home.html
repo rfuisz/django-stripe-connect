@@ -3,16 +3,23 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-  <h1 class="title is-size-1">Django Stripe Connect</h1>
+  <h1 class="title is-size-1">StrandBase</h1>
   <hr><br>
   {% if user.is_authenticated %}
-    <p class="is-size-6">Welcome, {{ user.email }}!</p>
     <br>
     {% if user.is_seller and not user.seller.stripe_user_id %}
       <a href="{% url 'authorize' %}" class="button is-info">Connect Stripe Account</a>
     {% endif %}
-    <a href="{% url 'course_list' %}" class="button is-primary">Purchase a Course</a>
+    <a href="{% url 'course_list' %}" class="button is-primary">Buy Part</a>
+
+
+
   {% else %}
     <p class="is-size-6">Please <a href="{% url 'login' %}">log in</a>.</p>
   {% endif %}
+  <a class="typeform-share button" href="https://fuisz.typeform.com/to/rqrKRj" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-hide-headers=true data-hide-footer=true target="_blank">Submit Part </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+
+  <a class="typeform-share button" href="https://fuisz.typeform.com/to/rqrKRj" data-mode="popup" style="display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-hide-headers=true data-hide-footer=true target="_blank">Review Part </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+  <iframe class="airtable-embed" src="https://airtable.com/embed/shrSHtHxjYYNooNf8?backgroundColor=cyanLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
 {% endblock %}
+
