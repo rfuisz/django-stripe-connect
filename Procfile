@@ -1,1 +1,1 @@
-web:gunicorn django_stripe_connect.wsgi
+web:gunicorn my_project.wsgi
