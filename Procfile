@@ -1,1 +1,1 @@
-web: gunicorn django-stripe-connect.wsgi
+web:gunicorn django-stripe-connect.wsgi
